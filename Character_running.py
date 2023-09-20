@@ -7,16 +7,14 @@ open_canvas()
 grass=load_image('grass.png')
 character=load_image('character.png')
 
+
+    
 def run_circle():
     print('circle')
-    clear_canvas_now()
-    grass.draw_now(400,30)
-    character.draw_now(400,90)
+    
     delay(1)
     
-    cx=800/2
-    cy=600/2
-    r=200
+    cx,cy,r=800/2,600/2,200
     for deg in range(0,360,5):
         x= cx+r*math.cos(deg/360*2*math.pi)
         y= cy+r*math.sin(deg/360*2*math.pi)
@@ -28,14 +26,19 @@ def run_circle():
 
 def run_rectangle():
     print('rectangle')
-    grass.draw_now(400,30)
-    character.draw_now(400,90)
-    pass
+
+    #bottom line
+    for x in range(50,750+1,10):
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,90)
+        delay(1)
+    
 
 
 
 while(True):
-    run_circle()
+    #run_circle()
     run_rectangle()
     break
 
