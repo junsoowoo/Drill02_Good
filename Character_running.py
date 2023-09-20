@@ -34,13 +34,13 @@ def run_rectangle():
     for x in range(50,750+1,10):
         render_All(x,90)
     #right line
-    for y in range(90,610+1,10):
+    for y in range(90,510+1,10):
         render_All(750,y)
     #top line
     for x in range(750,50-1,-10):
         render_All(x,750)
     #left line   
-    for y in range(610,90-1,-10):
+    for y in range(510,90-1,-10):
         render_All(50,y)
 
 
